@@ -141,6 +141,10 @@ echo.
 echo. -------------------------------------------------------------------------------------
 )>InfoMS.txt
 start InfoMS.txt
+cls
+echo.
+echo.
+echo warning: you only have 15 seconds to read the information otherwise you will have to repeat the operation to see it
 timeout /t 15 /nobreak > NUL
 del InfoMS.txt
 goto mainstart
