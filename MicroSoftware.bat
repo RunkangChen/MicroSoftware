@@ -45,7 +45,6 @@ echo.
 echo.
 echo. ---------------------------------------------------------------------------------------
 timeout /t 1 /nobreak > NUL
-cls
 (
 echo.
 echo.
@@ -73,16 +72,16 @@ cls
 color c
 echo --------------------------------------------------------------------------------------- 
 echo.
-echo.			____________________________
-echo.			[ MicroSoftware Enterprise ]
-echo.			============================
+echo.			  ____________________________
+echo.			  [ MicroSoftware Enterprise ]
+echo.			  ============================
 echo.
 echo.
 echo.
-echo.		[ 1.start ]			[ 2.exit ]
+echo.		  [ 1.start ]			      [ 2.exit ]
 echo.
 echo.
-echo.	[ support ]		[ help ]	[ info ]	[ settings ]
+echo.	  [ support ]		[ help ]	[ info ]	[ settings ]
 echo.
 echo.
 timeout /t 1 /nobreak > NUL
@@ -106,26 +105,26 @@ if %input%==SETTINGS goto sysettings
 :mainstart
 cls
 color 3
-echo.     ============================================================
+echo.     ===============================================================
 echo.
 echo.                     [ MicroSoftware Enterprise ]
 echo.
 echo.         1.shutdown    2.restart   3.pc tools
 echo.
-echo.     -------------------------------------------------------------------
+echo.     --------------------------------------------------------------
 echo.
 echo.         4.advanced tools          5.updateNow
 echo.
-echo.     -------------------------------------------------------------------
+echo.     --------------------------------------------------------------
 echo.
 echo.        [ help ] [ support ] [ update ]  [ pc info ]
 echo.
-echo.     ============================================================
+echo.     ================================================================
 echo.
 echo.
 echo.     please select ( 1, 2, 3, 4, 5, help, support, update, pcinfo)
 set /p home=
-if %r%== 1 goto shutoff
+if %home%== 1 goto shutoff
 :shutoff
 cls
 slidetoshutdown
