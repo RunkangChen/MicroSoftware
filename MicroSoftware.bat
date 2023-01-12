@@ -1,4 +1,4 @@
-echo off
+@echo off
 cls
 title MicroSoftware
 goto startsy
@@ -122,13 +122,31 @@ echo.
 echo.     ================================================================
 echo.
 echo.
-echo.     please select ( 1, 2, 3, 4, 5, help, support, update, pcinfo)
+echo.     please select ( 1, 2, 3, 4, 5, help, support, update, pcinfo) or exit
 set /p home=
 if %home%== 1 goto shutoff
+if %home%== 2 goto restart
+if %home%== 3 goto pctools
+if %home%== 4 goto advancedt
+if %home%== 5 goto syupdate
+if %home%== help goto syhelp
+if %home%== HELP goto syhelp
+if %home%== support goto sysupport
+if %home%== SUPPORT goto sysupport
+if %home%== update goto syupdate
+if %home%== UPDATE goto syupdate
+if %home%== exit goto mainexit
+if %home%== EXIT goto mainexit
+if %home%== pcinfo goto pcinformation
+if %home%== PCINFO goto pcinformation
 :shutoff
 cls
 slidetoshutdown
 goto mainstart
+:restart
+cls
+shutdown -r -t 3 -c "Ok..."
+goto mainexit
 
 :mainexit
 color 57
@@ -141,6 +159,8 @@ exit
 
 :sysupport
 cls
+echo ciao
+pause
 
 :syhelp
 cls
@@ -183,4 +203,8 @@ timeout /t 15 /nobreak > NUL
 del InfoMS.txt
 goto mainstart
 
-
+:pcinformation
+cls
+systeminfo
+pause
+goto mainstart
