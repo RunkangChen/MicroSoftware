@@ -159,11 +159,14 @@ exit
 
 :sysupport
 cls
-echo ciao
 pause
+start https://sites.google.com/view/microsoftware365/support
+goto startsy
 
 :syhelp
 cls
+start https://sites.google.com/view/microsoftware365/documentation
+goto startsy
 
 :syinfo
 cls
@@ -210,3 +213,19 @@ cls
 systeminfo
 pause
 goto mainstart
+
+:sysettings
+cls
+color 0a
+echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+echo.
+echo.                         [ MicroSoftware settings ]
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
