@@ -9,9 +9,12 @@ echo. --------------------------------------------------------------------------
 echo.
 echo.
 echo.   WEL
+echo.
+echo.
+echo.
+echo. ---------------------------------------------------------------------------------------
 timeout /t 1 /nobreak > NUL
 cls
-echo. ---------------------------------------------------------------------------------------
 echo.
 echo.
 echo.   WELCO
@@ -26,11 +29,23 @@ cls
 echo. ---------------------------------------------------------------------------------------
 echo.
 echo.
+echo.   WELCOME TO MicroSoftware
+echo.
+echo.
+echo.
+echo. ---------------------------------------------------------------------------------------
+timeout /t 1 /nobreak > NUL
+cls
+echo. ---------------------------------------------------------------------------------------
+echo.
+echo.
 echo.   WELCOME TO MicroSoftware Enterprise Edition 3.0v
 echo.
 echo.
 echo.
 echo. ---------------------------------------------------------------------------------------
+timeout /t 1 /nobreak > NUL
+cls
 (
 echo.
 echo.
@@ -49,7 +64,7 @@ echo.
 echo.     alternative email: chen.runkang1@gmail.com
 echo.
 echo.
-)>MicroSoftware-Log.txt
+)>MS-Log.txt
 timeout /t 3 /nobreak > NUL
 goto main
 
@@ -75,8 +90,8 @@ echo ---------------------------------------------------------------------------
 echo.
 echo.
 echo.
-echo. input= please select { 1, 2, support, help, info, settings }
-set /p input= =
+echo. please select { 1, 2, support, help, info, settings }
+set /p input=
 if %input%==1 goto mainstart
 if %input%==2 goto mainexit
 if %input%==support goto sysupport
@@ -91,11 +106,30 @@ if %input%==SETTINGS goto sysettings
 :mainstart
 cls
 color 3
+echo.     ============================================================
+echo.
+echo.                     [ MicroSoftware Enterprise ]
+echo.
+echo.         1.shutdown    2.restart   3.pc tools
+echo.
+echo.     -------------------------------------------------------------------
+echo.
+echo.         4.advanced tools          5.updateNow
+echo.
+echo.     -------------------------------------------------------------------
+echo.
+echo.        [ help ] [ support ] [ update ]  [ pc info ]
+echo.
+echo.     ============================================================
 echo.
 echo.
-echo.
-echo ciao
-pause
+echo.     please select ( 1, 2, 3, 4, 5, help, support, update, pcinfo)
+set /p home=
+if %r%== 1 goto shutoff
+:shutoff
+cls
+slidetoshutdown
+goto mainstart
 
 :mainexit
 color 57
@@ -103,6 +137,7 @@ cls
 echo.
 echo.
 pause
+del MS-Log.txt
 exit
 
 :sysupport
