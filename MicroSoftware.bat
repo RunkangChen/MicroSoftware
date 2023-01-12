@@ -113,6 +113,9 @@ cls
 
 :syinfo
 cls
+echo.
+echo.
+echo. 
 (
 echo.
 echo. -------------------------------------------------------------------------------------
@@ -136,4 +139,10 @@ echo.
 echo.           Powered by Runkang
 echo.
 echo. -------------------------------------------------------------------------------------
-)
+)>InfoMS.txt
+start InfoMS.txt
+timeout /t 15 /nobreak > NUL
+del InfoMS.txt
+goto mainstart
+
+
