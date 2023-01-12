@@ -194,12 +194,14 @@ echo.           Powered by Runkang
 echo.
 echo. -------------------------------------------------------------------------------------
 )>InfoMS.txt
-start InfoMS.txt
 cls
 echo.
 echo.
 echo warning: you only have 15 seconds to read the information otherwise you will have to repeat the operation to see it
+timeout /t 5 /nobreak > NUL
+start InfoMS.txt
 timeout /t 15 /nobreak > NUL
+taskkill /im notepad.exe /f
 del InfoMS.txt
 goto mainstart
 
