@@ -11,12 +11,21 @@ echo.
 echo.   WEL
 timeout /t 1 /nobreak > NUL
 cls
+echo. ---------------------------------------------------------------------------------------
+echo.
+echo.
 echo.   WELCO
 timeout /t 1 /nobreak > NUL
 cls
+echo. ---------------------------------------------------------------------------------------
+echo.
+echo.
 echo.   WELCOME
 timeout /t 1 /nobreak > NUL
 cls
+echo. ---------------------------------------------------------------------------------------
+echo.
+echo.
 echo.   WELCOME TO MicroSoftware Enterprise Edition 3.0v
 echo.
 echo.
@@ -25,27 +34,25 @@ echo. --------------------------------------------------------------------------
 (
 echo.
 echo.
-echo.
-echo.
-echo.
 echo. Log File:
 echo.
-echo.   Time: %time%
+echo.     Time: %time%
 echo.
-echo.   Date: %date%
+echo.     Date: %date%
 echo.
-echo.   numeber: %random%
+echo.     number: %random%
 echo.
-echo.   support: https://sites.google.com/view/microsoftware365/support
+echo.     support: https://sites.google.com/view/microsoftware365/support
 echo.
-echo.   email contact: club.leggendario@gmail.com
+echo.     email contact: club.leggendario@gmail.com
 echo.
-echo.   alternative email: chen.runkang1@gmail.com
+echo.     alternative email: chen.runkang1@gmail.com
 echo.
 echo.
-)>Log.txt
+)>MicroSoftware-Log.txt
 timeout /t 3 /nobreak > NUL
 goto main
+
 :main
 cls
 color c
@@ -80,6 +87,7 @@ if %input%==info goto syinfo
 if %input%==INFO goto syinfo
 if %input%==settings goto sysettings
 if %input%==SETTINGS goto sysettings
+
 :mainstart
 cls
 color 3
@@ -88,6 +96,7 @@ echo.
 echo.
 echo ciao
 pause
+
 :mainexit
 color 57
 cls
@@ -95,3 +104,36 @@ echo.
 echo.
 pause
 exit
+
+:sysupport
+cls
+
+:syhelp
+cls
+
+:syinfo
+cls
+(
+echo.
+echo. -------------------------------------------------------------------------------------
+echo.                     MicroSoftware
+echo.
+echo.     Version: Enterprise 3.0v
+echo.
+echo.     WebSite Url: https://sites.google.com/view/microsoftware365
+echo.
+echo.     email: club.leggendario@gmail.com
+echo.
+echo.     AlternativeEmail: chen.runkang1@gmail.com
+echo.
+echo.     Number: %random%%random%
+echo.
+echo.     Time: %time%
+echo.
+echo.     Date: %date%
+echo.
+echo.
+echo.           Powered by Runkang
+echo.
+echo. -------------------------------------------------------------------------------------
+)
