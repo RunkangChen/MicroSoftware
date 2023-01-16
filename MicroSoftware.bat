@@ -81,7 +81,7 @@ echo.
 echo.		  [ 1.start ]			      [ 2.exit ]
 echo.
 echo.
-echo.	  [ support ]		[ help ]	[ info ]	[ settings ]
+echo.	  [ support ]		[ help ]	[ info ]	
 echo.
 echo.
 timeout /t 1 /nobreak > NUL
@@ -99,8 +99,6 @@ if %input%==help goto syhelp
 if %input%==HELP goto syhelp
 if %input%==info goto syinfo
 if %input%==INFO goto syinfo
-if %input%==settings goto sysettings
-if %input%==SETTINGS goto sysettings
 
 :mainstart
 cls
@@ -214,61 +212,44 @@ systeminfo
 pause
 goto mainstart
 
-:sysettings
+:pctools
 cls
-color 0a
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+echo. =========================================================================
 echo.
-echo.                         [ MicroSoftware settings ]
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-ECHO.
-ECHO.
-echo Loading.
-timeout /t 1 /nobreak > NUL
-cls
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+echo.   1.Taskmanager     2.CleanDiskTools      3.MRT AntiVirus
 echo.
-echo.                         [ MicroSoftware settings ]
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-ECHO.
-ECHO.
-echo Loading..
-timeout /t 1 /nobreak > NUL
-cls
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+echo. 
 echo.
-echo.                         [ MicroSoftware settings ]
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-ECHO.
-ECHO.
-echo Loading...
-timeout /t 1 /nobreak > NUL
-cls
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 echo.
-echo.                         [ MicroSoftware settings ]
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-ECHO.
-ECHO.
-echo Loading.
-timeout /t 1 /nobreak > NUL
-cls
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 echo.
-echo.                         [ MicroSoftware settings ]
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-ECHO.
-ECHO.
-echo Loading..
-timeout /t 1 /nobreak > NUL
-cls
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 echo.
-echo.                         [ MicroSoftware settings ]
-echo. '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-ECHO.
-ECHO.
-echo Loading...
-timeout /t 1 /nobreak > NUL
+echo.
+echo.
+echo.
+echo.
+echo.
+echo. =========================================================================
+echo.
+echo.
+choice /c 1234560 /m "please select"
+if %errorlevel% == 1 goto taskmgr
+if %errorlevel% == 2 goto cleanD
+if %errorlevel% == 3 goto mrt
+if %errorlevel% == 4 goto taskmgr
+if %errorlevel% == 5 goto taskmgr
+if %errorlevel% == 6 goto taskmgr
+if %errorlevel% == 0 goto mainstart
+:taskmgr
 cls
-echo. --------------------------------------------------------------------------------------
+taskmgr
+goto pctools
+:cleanD
+cls
+cleanmgr
+goto pctools
+:mrt
+cls
+mrt
+goto pctools
+
+
