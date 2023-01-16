@@ -236,14 +236,14 @@ echo.
 echo. =========================================================================
 echo.
 echo.
-choice /c 1234560 /m "please select"
+choice /c 123456A /m "please select"
 if %errorlevel% == 1 goto taskmgr
 if %errorlevel% == 2 goto cleanD
 if %errorlevel% == 3 goto mrt
 if %errorlevel% == 4 goto taskmgr
 if %errorlevel% == 5 goto taskmgr
 if %errorlevel% == 6 goto pcm
-if %errorlevel% == 0 goto sysy
+if %errorlevel% == A goto sysy
 :taskmgr
 cls
 taskmgr
