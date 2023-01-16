@@ -219,7 +219,7 @@ echo.
 echo.   1.Taskmanager     2.CleanDiskTools      3.MRT AntiVirus
 echo.
 echo. 
-echo.
+echo.   4.Advanced Tools  6.ComputerManager
 echo.
 echo.
 echo.
@@ -238,7 +238,7 @@ if %errorlevel% == 3 goto mrt
 if %errorlevel% == 4 goto taskmgr
 if %errorlevel% == 5 goto taskmgr
 if %errorlevel% == 6 goto taskmgr
-if %errorlevel% == 0 goto mainstart
+if %errorlevel% == 0 goto sysy
 :taskmgr
 cls
 taskmgr
@@ -251,5 +251,8 @@ goto pctools
 cls
 mrt
 goto pctools
+:sysy
+cls
+goto mainstart
 
 
