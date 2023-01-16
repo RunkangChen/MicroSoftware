@@ -94,6 +94,9 @@ echo.
 echo.
 echo. ---------------------------------------------------------------------------------------
 timeout /t 1 /nobreak > NUL
+if EXIST "MS-Log.txt" goto main
+if NOT EXIST MS-Log.txt goto pop
+:pop
 (
 echo.
 echo.
