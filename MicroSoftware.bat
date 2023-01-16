@@ -286,7 +286,7 @@ if %errorlevel% == 2 goto cleanD
 if %errorlevel% == 3 goto mrt
 if %errorlevel% == 4 goto taskmgr
 if %errorlevel% == 5 goto taskmgr
-if %errorlevel% == 6 goto taskmgr
+if %errorlevel% == 6 goto pcm
 if %errorlevel% == 0 goto sysy
 :taskmgr
 cls
@@ -303,5 +303,9 @@ goto pctools
 :sysy
 cls
 goto mainstart
+:pcm
+cls
+compmgmt.msc
+goto pctools
 
 
