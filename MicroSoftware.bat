@@ -157,8 +157,7 @@ cls
 echo.
 echo.
 pause
-rmdir MS
-del MS-Log.txt
+rd /s /q MS
 exit
 
 :sysupport
