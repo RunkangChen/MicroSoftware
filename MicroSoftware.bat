@@ -1,53 +1,4 @@
 @echo off
-if not "%minimized%"=="" goto :minimized
-set minimized=true
-start /min cmd /C "%~dpnx0"
-goto :EOF
-:minimized
-@echo off
-cls
-
-
-
->nul 2>&1 "%systemroot%\system32\cacls.exe" "%systemroot%\system32\config\system"
-If '%errorlevel%' neq '0' (Goto uacprompt) else (goto gotadmin)
-:uacprompt
-Echo set uac = createobject^("shell.application"^) > "%temp%\getadmin.vbs"
-Echo uac.shellexecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
-"%temp%\getadmin.vbs"
-Exit /b
-:gotadmin
-If exist "%temp%\getadmin.vbs" (del "%temp%\getadmin.vbs")
-
-
-
-
-
-set folder="c:\windows\system32\StexupMenuUtility\"
-
-set backmenu=Premi un tasto per tornare al menu!
-
-
-
-cd\
-md %folder% 2>nul
-cd %folder%
-
-
-
-
-
-if exist color.txt (
-set /p colore=<color.txt
-) else (
-set colore=0a
-)
-
-
-
-powershell Start-Sleep -milliseconds 200
-PowerShell.exe -window normal -command mode 120,30
-
 cls
 title MicroSoftware
 goto startsy
@@ -94,9 +45,11 @@ echo.
 echo.
 echo. ---------------------------------------------------------------------------------------
 timeout /t 1 /nobreak > NUL
-if EXIST "MS-Log.txt" goto main
-if NOT EXIST MS-Log.txt goto pop
+if EXIST "MS" goto main
+if NOT EXIST MS goto pop
 :pop
+md MS
+cd MS
 (
 echo.
 echo.
@@ -115,7 +68,7 @@ echo.
 echo.     alternative email: chen.runkang1@gmail.com
 echo.
 echo.
-)>MS-Log.txt
+)>Log.txt
 timeout /t 3 /nobreak > NUL
 goto main
 
@@ -204,6 +157,7 @@ cls
 echo.
 echo.
 pause
+rmdir MS
 del MS-Log.txt
 exit
 
