@@ -45,11 +45,6 @@ echo.
 echo.
 echo. ---------------------------------------------------------------------------------------
 timeout /t 1 /nobreak > NUL
-if EXIST "MS" goto main
-if NOT EXIST MS goto pop
-:pop
-md MS
-cd MS
 (
 echo.
 echo.
@@ -69,7 +64,7 @@ echo.     alternative email: chen.runkang1@gmail.com
 echo.
 echo.
 )>Log.txt
-timeout /t 3 /nobreak > NUL
+timeout /t 2 /nobreak > NUL
 goto main
 
 :main
@@ -236,14 +231,8 @@ echo.
 echo. =========================================================================
 echo.
 echo.
-choice /c 123456A /m "please select"
-if %errorlevel% == 1 goto taskmgr
-if %errorlevel% == 2 goto cleanD
-if %errorlevel% == 3 goto mrt
-if %errorlevel% == 4 goto taskmgr
-if %errorlevel% == 5 goto taskmgr
-if %errorlevel% == 6 goto pcm
-if %errorlevel% == A goto sysy
+set /p pct=
+
 :taskmgr
 cls
 taskmgr
