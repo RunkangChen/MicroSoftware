@@ -65,40 +65,7 @@ echo.
 echo.
 )>Log.txt
 timeout /t 2 /nobreak > NUL
-goto main
-
-:main
-cls
-color c
-echo --------------------------------------------------------------------------------------- 
-echo.
-echo.			  ____________________________
-echo.			  [ MicroSoftware Enterprise ]
-echo.			  ============================
-echo.
-echo.
-echo.
-echo.		  [ 1.start ]			      [ 2.exit ]
-echo.
-echo.
-echo.	  [ support ]		[ help ]	[ info ]	
-echo.
-echo.
-timeout /t 1 /nobreak > NUL
-echo ---------------------------------------------------------------------------------------
-echo.
-echo.
-echo.
-echo. please select { 1, 2, support, help, info, settings }
-set /p input=
-if %input%==1 goto mainstart
-if %input%==2 goto mainexit
-if %input%==support goto sysupport
-if %input%==SUPPORT goto sysupport
-if %input%==help goto syhelp
-if %input%==HELP goto syhelp
-if %input%==info goto syinfo
-if %input%==INFO goto syinfo
+goto mainstart
 
 :mainstart
 cls
