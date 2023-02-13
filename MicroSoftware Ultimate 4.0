@@ -1,4 +1,4 @@
-:: Powered By Runkang
+Update
 @echo off
 cls
 powershell sleep 0.5
