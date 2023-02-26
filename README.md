@@ -6,7 +6,8 @@
 
 
 ### Ultimate
-- [2.0](https://github.com/RunkangChen/MicroSoftware/blob/main/MICROSOFTWARE_ULTIMATE.bat)
+
+- [2.0](https://github.com/RunkangChen/MicroSoftware/files/10833618/MicroSoftwareInstaller.zip)
 - [4.0 Working 87% ](https://github.com/RunkangChen/MicroSoftware/blob/main/MicroSoftware%20Ultimate%204.0)
 
 # License
